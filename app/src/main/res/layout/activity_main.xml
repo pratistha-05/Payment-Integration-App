@@ -31,7 +31,6 @@
         android:layout_width="110dp"
         android:layout_height="70dp"
         android:layout_marginEnd="148dp"
-        android:layout_marginBottom="152dp"
         android:background="@drawable/mybutton"
         android:backgroundTint="#E840C4FF"
         android:text="Pay"
@@ -41,7 +40,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.782" />
 
     <ImageView
         android:id="@+id/imageView"
