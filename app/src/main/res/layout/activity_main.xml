@@ -8,48 +8,65 @@
     android:background="@drawable/paywall"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/amount"
-        android:layout_width="210dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Enter Amount"
-        android:inputType="textPersonName"
-        android:outlineProvider="bounds"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:background="@drawable/mybutton"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="303dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="72dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/payment_button"
-        android:layout_width="110dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="148dp"
-        android:background="@drawable/mybutton"
-        android:backgroundTint="#E840C4FF"
-        android:text="Pay"
-        android:textColor="@android:color/background_dark"
-        android:textSize="20sp"
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="210dp"
+                android:layout_height="75dp"
+                android:background="@drawable/mybutton"
+                android:ems="10"
+                android:hint="Enter Amount"
+                android:layout_marginBottom="10dp"
+                android:inputType="textPersonName"
+                android:outlineProvider="bounds"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782" />
+            <Button
+                android:id="@+id/payment_button"
+                android:layout_width="110dp"
+                android:layout_height="70dp"
+                android:background="@drawable/mybutton"
+                android:backgroundTint="#E840C4FF"
+                android:text="Pay"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/card"
+                app:layout_constraintStart_toStartOf="@+id/card"
+                app:layout_constraintVertical_bias="0.821" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="244dp"
         android:layout_height="202dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="84dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/card"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/payimage" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
